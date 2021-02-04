@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% set bodyId = "page-ideas" %}
+
+{% block title %}
+  <title> Ideias - Casa Criativa </title>
+{% endblock %}
+
+{% block content %}
+
+  <header>
+    <a href="/">
+      <img src="/logo.png" alt="Imagem da Logomarca">
+    </a>
+    <nav>
+      <li><a href="/"> Início </a></li>
+      <li><a class="button" href="#" onclick="onOff()"> Nova Ideia </a></li>
+    </nav>
+  </header>
+
+  <section id="title">
+    <p> em exibição </p>
+    <h1> Ideias </h1>
+  </section>
+
+  <main>
+    <section id="ideas">
+      {% include "allideas.html" %}
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Com <span style="color: red;">&hearts;</span>
+      <a href="https://www.instagram.com/dias_pdr/" target="_blank">
+        Tio Dias
+      </a>
+    </p>
+  </footer>
+
+{% endblock %}
